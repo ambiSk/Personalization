@@ -1,0 +1,42 @@
+<!doctype html>
+<title> Hike Flask project </title>
+<h2> Convert Selfie to 3D Avatar</h2>
+<p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</p>
+{% if threeDimage %}
+
+<div class="row">
+  <div class="column">
+    <img src="data:;base64,{{ image }}" width = 200>
+  </div>
+  <div class="column">
+    <img src="data:;base64,{{ threeDimage }}" width = 200>
+  </div>
+</div>
+
+    
+{% endif %}
+<form method="post" action="/" enctype="multipart/form-data">
+    <select name='gender'>
+        {% for gender in genders%}
+            <option value= "{{gender}}">{{ gender }}</option>
+        {% endfor %}
+    </select>
+    <dl>
+        <p>
+            <input type="file" name="file" autocomplete="off" required>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Upload">
+    </p>
+</form>

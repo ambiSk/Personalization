@@ -1,0 +1,17 @@
+<!doctype html>
+<title> Hike Flask project </title>
+<h2> 3D Avatar</h2>
+
+{% if threeDimage %}
+
+<div class="row">
+  <div class="column">
+    <img src="data:;base64,{{ image }}" width = 200>
+  </div>
+  <div class="column">
+    <img src="data:;base64,{{ threeDimage }}" width = 200>
+  </div>
+</div>
+{% else %}
+<h2>File not processed</h2>
+{% endif %}
