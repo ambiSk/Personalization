@@ -1,4 +1,4 @@
-import requests, base64, json, os, cv2, ntpath, time
+import requests, base64, json, os, time
 
 class ImageAPI:
     def __init__(self, ):

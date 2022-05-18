@@ -1,6 +1,10 @@
-<!doctype html>
-<title> Hike Flask project </title>
-<h2> Convert Selfie to 3D Avatar</h2>
+{% extends 'layouts.html'%}
+{% block content %}
+<div class="test">
+    <h2> Hyper-Personalized 3D Avatars & Apparels From a Single Image</h2>
+    <h5>Pankaj Dahiya, Srishti Goel, Pranshu Agarwal, Omisha Sapra, Kush Khurana, Ankur Narang, Neeraj Kumar, Ambesh Shekhar, Mujtaba Hasan, Arpit Rastogi, Vaibhav Gupta and Dipankar Sarkar</h5>
+</div>
+<img src="{{url_for('static', filename = '/teaser.png')}}" class = "teaser">
 <p>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
@@ -40,3 +44,4 @@
         <input type="submit" value="Upload">
     </p>
 </form>
+{% endblock %}

@@ -11,8 +11,8 @@ def allowed_file(filename):
     return filename.endswith(('.png', '.jpg', '.jpeg'))
 
 @app.route('/')
-def page():
-    return render_template('upload.html', genders = genders)
+def homepage():
+    return render_template('upload.html', title = 'Home Page', genders = genders)
 
 @app.route('/', methods=['POST'])
 def upload():

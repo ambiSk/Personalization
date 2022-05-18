@@ -1,0 +1,33 @@
+html{
+    margin: 3% 10% 3%;
+
+}
+.test h2{
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+.test h5{
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+.teaser{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.column {
+    float: centre;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after image containers */
+.row::after {
+    align-items: center;
+    content: "";
+    clear: both;
+    display: table;
+  }
