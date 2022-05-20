@@ -32,11 +32,11 @@ class ImageAPI:
         response = requests.get(self.URL_GET % request_id, headers={}, data=payload, timeout = 5)
     #     print("Response", response.text)
         response = response.json()["data"]
-
+        
         return response
     
     def get_3d_data(self, data_2d, gender):
-    
+        data_2d[gender.capitalize() + 'Eyes_Ball_R']['color'] = "#3b1a1b"
         data_2d[gender.capitalize() + "FaceShape"]['color'] = data_2d['SkinColor']
 
         payload = json.dumps({"uid": "test_user", "data": data_2d, 

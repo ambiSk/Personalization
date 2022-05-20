@@ -12,17 +12,21 @@ def allowed_file(filename):
 
 @app.route('/')
 def homepage():
-    return render_template('upload.html', title = 'Home Page', genders = genders)
+    return render_template('upload.html', title = 'Home Page')
 
 @app.route('/', methods=['POST'])
 def upload():
+    
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
+
     file = request.files['file']
+    
     if file.filename == '':
         flash('No selected file')
         return redirect(request.url)
+        
     if file and allowed_file(file.filename):
         gender = str(request.form.get('gender'))
         image = file.read()
@@ -32,6 +36,6 @@ def upload():
         
         image = b64encode(image).decode("utf-8")
 
-        return render_template('upload.html', image = image, threeDimage = image3d, genders = genders )
+        return render_template('upload.html', image = image, threeDimage = image3d)
 
 

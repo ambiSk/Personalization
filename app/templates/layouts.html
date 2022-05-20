@@ -17,11 +17,97 @@
         <h2> Hyper-Personalized 3D Avatars & Apparels From a Single Image</h2>
         <h5><a href="mailto:pankajd@hike.in">Pankaj Dahiya</a>, <a href="mailto:srishtigoel72@gmail.com">Srishti Goel</a>, <a href="mailto:pranshu.agarwal1996@gmail.com">Pranshu Agarwal</a>, <a href="mailto:omisha.s@hike.in">Omisha Sapra</a>, <a href="mailto:kush@hike.in">Kush Khurana</a>, <a href="mailto:ankur@hike.in">Ankur Narang</a>, <a href="mailto:neeraj2k14@gmail.com">Neeraj Kumar</a>, <a href="mailto:ambeshs@hike.in">Ambesh Shekhar</a>, <a href="mailto:mujtaba@hike.in">Mujtaba Hasan</a>, <a href="mailto:arpitrastogi0211@gmail.com">Arpit Rastogi</a>, <a href="mailto:vaibhavgupta2507@gmail.com">Vaibhav Gupta </a> and <a href="mailto:dipankars@hike.in">Dipankar Sarkar</a></h5>
     </div>
+    
     <img src="{{url_for('static', filename = '/teaser.png')}}" class = "teaser">
+
+    <div class="abstract">
+        <p>We present a 3D Avatar system which automates creation of a hyper-personalized avatar and apparels from a single image. The generated 3D Avatar and apparel is highly personalized and available at multiple resolutions to suit a variety of use-cases & devices. We personalize the avatar based on a single image of a user, by deforming a base facial mesh via 250 custom blend-shapes. We configure the hair, beard & various accessories by picking from thousands of possible combinations that align closely to match the user's taste, based on key themes that emerge from the image. Given an input image, hundreds of deformations and themes are inferred by a multi-task learner, which leverages facial landmark detection, geometric feature extraction, image classification and segmentation models. We also personalize 3D outfits on-the-fly by combining state-of-the-art image segmentation, quilting, and in-painting techniques. Rendering the model on a variety of user devices across multi-resolution use-cases presents a challenge because of different compute and memory capabilities. We solve this problem by using four different 3D meshes with varying poly-counts and mapping them using geometric optimization. Further, to enable voice-based lip-sync, we use transfer learning to fine-tune state-of-the-art speech-to-text models for predicting phonemes.</p>
+    </div>
+
+
+
+
     {% block content %}
     {% endblock %}
+
+    <h2 class="exp">Results</h2>
+    <div class="results">
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-7btt">Features</th>
+            <th class="tg-7btt">Space</th>
+            <th class="tg-7btt">Male</th>
+            <th class="tg-7btt">Female</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0pky">Eyes(ACC)</td>
+            <td class="tg-c3ow">17</td>
+            <td class="tg-c3ow">37.10</td>
+            <td class="tg-c3ow">48.96</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Cheek Lines(ACC)</td>
+            <td class="tg-c3ow">2</td>
+            <td class="tg-c3ow">96.14</td>
+            <td class="tg-c3ow">96.14</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Dimples(ACC)</td>
+            <td class="tg-c3ow">2</td>
+            <td class="tg-c3ow">89.30</td>
+            <td class="tg-c3ow">89.30</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Eye Brow Contour(ACC)</td>
+            <td class="tg-c3ow">28</td>
+            <td class="tg-c3ow">28.26</td>
+            <td class="tg-c3ow">22.85</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Face Chubbiness(MSE)</td>
+            <td class="tg-c3ow">-</td>
+            <td class="tg-c3ow">0.16</td>
+            <td class="tg-c3ow">0.19</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Hair Length(ACC)</td>
+            <td class="tg-c3ow">4</td>
+            <td class="tg-c3ow">96.54</td>
+            <td class="tg-c3ow">92.60</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Hair Texture(ACC)</td>
+            <td class="tg-c3ow">4</td>
+            <td class="tg-c3ow">93.45</td>
+            <td class="tg-c3ow">89.70</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Hair Symmetry(ACC)</td>
+            <td class="tg-c3ow">4</td>
+            <td class="tg-c3ow">91.62</td>
+            <td class="tg-c3ow">82.50</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Hair Parting(ACC)</td>
+            <td class="tg-c3ow">5</td>
+            <td class="tg-c3ow">86.34</td>
+            <td class="tg-c3ow">77.40</td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">Hair Forehead Coverage</td>
+            <td class="tg-c3ow">6</td>
+            <td class="tg-c3ow">90.28</td>
+            <td class="tg-c3ow">81.96</td>
+          </tr>
+        </tbody>
+        </table>
+        <li class="caption">Performance of Multi task learner on Evaluation Metrics for different components related to female and male</li>
+    </div>
     <!-- BootStrap 5.2.0 Beta JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
-
+    <script src="{{url_for('static', filename = '/main.js')}}"></script>
 </body>
 </html>

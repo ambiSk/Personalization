@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+
 html,body{
     /* display: flex; */
     margin: 3% 10% 3%;
     /* flex-direction: row; */
+    height: 150%;
 }
 .test h2{
     font-weight: bold;
@@ -16,57 +19,52 @@ html,body{
 .teaser{
     display: flex;
     margin: auto;
-    width: 1200px;
+    width: 80%;
 }
 
-.column {
-    float: centre;
-    width: 50%;
-    padding: 10px;
-  }
-  
-  /* Clear floats after image containers */
-.row::after {
-    align-items: center;
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-.uploadBox{
-    margin: auto;
-    border:2px dashed #000;
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
+.row{
     display: flex;
+    width: auto;
+}
+.column{
+    display: flex;
+    flex: 1;
+    
+    padding: 10px;
+    border:2px dashed #000;
+    border-radius: 5px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0 10% 0 10%;
 }
 
-.uploadBox.active{
+#uploadBox.active{
     border:2px dashed #000;
 }
 
-.uploadBox .icon{
+#uploadBox .icon{
+    font-size: 50px;
+    color: #000;
+}
+#resultBox .icon{
     font-size: 50px;
     color: #000;
 }
 
-.uploadBox header{
+#uploadBox header{
     font-size: 10px;
     font-weight: bold;
     text-align: center;
 }
 
-.uploadBox span{
+#uploadBox span{
     font-size: 10px;
     text-align: center;
     margin: 10px 0 15px 0;
 }
 
-.uploadBox button{
+#uploadBox button{
     padding: 10px 25px;
     font-size: 10px;
     border: none;
@@ -77,9 +75,57 @@ html,body{
     cursor: pointer;
 }
 
-.uploadBox img{
+#uploadBox img{
     width: 200px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+}
+.gender{
+    display: flex;
+    margin: 20px 15% 0 18%;
+}
+
+input[name="gender"]{
+    
+    display: flex;
+    padding: 10px;
+    margin: 6px 5px 0 30px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+        .tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+h2.exp{
+    margin-left: 10%;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: underline;
+}
+.abstract{
+    margin: 20px 15% 20px 15%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: darkgray;
+}
+.upload{
+    margin: 20px 15% 20px 22%;
+    color: darkgray;
+    background-color: #000;
+    align-items: center;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px 25px;    
+}
+
+.results{
+    margin-left: 40%;
+}
+.caption{
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    margin-left: -200px;
 }
