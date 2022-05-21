@@ -31,81 +31,131 @@
     {% endblock %}
 
     <h2 class="exp">Results</h2>
-    <div class="results">
-        <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-7btt">Features</th>
-            <th class="tg-7btt">Space</th>
-            <th class="tg-7btt">Male</th>
-            <th class="tg-7btt">Female</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tg-0pky">Eyes(ACC)</td>
-            <td class="tg-c3ow">17</td>
-            <td class="tg-c3ow">37.10</td>
-            <td class="tg-c3ow">48.96</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Cheek Lines(ACC)</td>
-            <td class="tg-c3ow">2</td>
-            <td class="tg-c3ow">96.14</td>
-            <td class="tg-c3ow">96.14</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Dimples(ACC)</td>
-            <td class="tg-c3ow">2</td>
-            <td class="tg-c3ow">89.30</td>
-            <td class="tg-c3ow">89.30</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Eye Brow Contour(ACC)</td>
-            <td class="tg-c3ow">28</td>
-            <td class="tg-c3ow">28.26</td>
-            <td class="tg-c3ow">22.85</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Face Chubbiness(MSE)</td>
-            <td class="tg-c3ow">-</td>
-            <td class="tg-c3ow">0.16</td>
-            <td class="tg-c3ow">0.19</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Hair Length(ACC)</td>
-            <td class="tg-c3ow">4</td>
-            <td class="tg-c3ow">96.54</td>
-            <td class="tg-c3ow">92.60</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Hair Texture(ACC)</td>
-            <td class="tg-c3ow">4</td>
-            <td class="tg-c3ow">93.45</td>
-            <td class="tg-c3ow">89.70</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Hair Symmetry(ACC)</td>
-            <td class="tg-c3ow">4</td>
-            <td class="tg-c3ow">91.62</td>
-            <td class="tg-c3ow">82.50</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Hair Parting(ACC)</td>
-            <td class="tg-c3ow">5</td>
-            <td class="tg-c3ow">86.34</td>
-            <td class="tg-c3ow">77.40</td>
-          </tr>
-          <tr>
-            <td class="tg-0pky">Hair Forehead Coverage</td>
-            <td class="tg-c3ow">6</td>
-            <td class="tg-c3ow">90.28</td>
-            <td class="tg-c3ow">81.96</td>
-          </tr>
-        </tbody>
-        </table>
-        <li class="caption">Performance of Multi task learner on Evaluation Metrics for different components related to female and male</li>
+    <table class="tg" id="metrics">
+    <thead>
+      <tr>
+        <th class="tg-7btt">Features</th>
+        <th class="tg-7btt">Space</th>
+        <th class="tg-7btt">Male</th>
+        <th class="tg-7btt">Female</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tg-0pky">Eyes(ACC)</td>
+        <td class="tg-c3ow">17</td>
+        <td class="tg-c3ow">37.10</td>
+        <td class="tg-c3ow">48.96</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Cheek Lines(ACC)</td>
+        <td class="tg-c3ow">2</td>
+        <td class="tg-c3ow">96.14</td>
+        <td class="tg-c3ow">96.14</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Dimples(ACC)</td>
+        <td class="tg-c3ow">2</td>
+        <td class="tg-c3ow">89.30</td>
+        <td class="tg-c3ow">89.30</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Eye Brow Contour(ACC)</td>
+        <td class="tg-c3ow">28</td>
+        <td class="tg-c3ow">28.26</td>
+        <td class="tg-c3ow">22.85</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Face Chubbiness(MSE)</td>
+        <td class="tg-c3ow">-</td>
+        <td class="tg-c3ow">0.16</td>
+        <td class="tg-c3ow">0.19</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Hair Length(ACC)</td>
+        <td class="tg-c3ow">4</td>
+        <td class="tg-c3ow">96.54</td>
+        <td class="tg-c3ow">92.60</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Hair Texture(ACC)</td>
+        <td class="tg-c3ow">4</td>
+        <td class="tg-c3ow">93.45</td>
+        <td class="tg-c3ow">89.70</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Hair Symmetry(ACC)</td>
+        <td class="tg-c3ow">4</td>
+        <td class="tg-c3ow">91.62</td>
+        <td class="tg-c3ow">82.50</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Hair Parting(ACC)</td>
+        <td class="tg-c3ow">5</td>
+        <td class="tg-c3ow">86.34</td>
+        <td class="tg-c3ow">77.40</td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">Hair Forehead Coverage</td>
+        <td class="tg-c3ow">6</td>
+        <td class="tg-c3ow">90.28</td>
+        <td class="tg-c3ow">81.96</td>
+      </tr>
+    </tbody>
+    </table>  
+    <li id="metric">Performance of Multi task learner on Evaluation Metrics for different components related to female and male</li>
+
+    <table class="tg" id="tgSpeech">
+      <thead>
+        <tr>
+          <th class="tg-7btt">Method</th>
+          <th class="tg-7btt">PER</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-0pky">Deep Speech 2</td>
+          <td class="tg-c3ow">65.62</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Wav2Vec2 Base Model</td>
+          <td class="tg-c3ow">55.21</td>
+        </tr>
+        <tr>
+          <td class="tg-0pky">Proposed Model</td>
+          <td class="tg-c3ow">27.34</td>
+        </tr>
+      </tbody>
+    </table>
+    <li id="speech"> Comparison of proposed Lip Synchronization method with baseline models</li>
+    <h2 class="exp">Conclusion</h2>
+    <p class="conclusion">Our system demonstrates the combined impact of hyper-personalization with rich capturing diversity of fashion choices on-the-fly, powered by a novel multitask learner that requires just a single image. Further, we enable a lip sync flow that is a significant improvement over existing art. Finally, the hyperpersonalization avatar can animate seamlessly while maintaining all the personalization aspects, and is portable to 4 different resolutions seamlessly. In the future experiments, we intend to focus further improving finer hyper-personalization aspects of the avatar (e.g.: facial depth features, skin textures etc.). Also, we are creating a multi-lingual lip synchronization flow that would make the avatar truly representative of diverse human languages and dialects. We also propose to further innovate on the multi-resolution aspects of the avatar by leveraging state of the art differentiable rendering techniques.</p>
+    <h2 class="exp">References</h2>
+    <div class="refRow">
+      <ol class="colRef">
+        <li>Alejandro Acero. Acoustical and environmental robustness in automatic speech recognition. 1991.</li>
+        <li>Dario Amodei, Sundaram Ananthanarayanan, Rishita Anubhai, Jingliang Bai, Eric Battenberg, Carl Case, Jared Casper, Bryan Catanzaro, Qiang Cheng, Guoliang Chen, Jie Chen, Jingdong Chen, Zhijie Chen, Mike Chrzanowski, Adam Coates, Greg Diamos, Ke Ding, Niandong Du, Erich Elsen, and Zhenyao Zhu. Deep Speech 2: End-to-End Speech Recognition in English and Mandarin. 2015.</li>
+        <li>Baevski, A., Zhou, Y., Mohamed, A., & Auli, M. (2020). wav2vec 2.0: A framework for self-supervised learning of speech representations. Advances in Neural Information Processing Systems, 33, 12449-12460.</li>
+        <li>McAuliffe, M., Socolof, M., Mihuc, S., Wagner, M., & Sonderegger, M. (2017, August). Montreal Forced Aligner: Trainable Text-Speech Alignment Using Kaldi. In Interspeech (Vol. 2017, pp. 498-502).</li>
+        <li>Conneau, A., Baevski, A., Collobert, R., Mohamed, A., & Auli, M. (2020). Unsupervised cross-lingual representation learning for speech recognition. arXiv preprint arXiv:2006.13979.</li>
+        <li>Efros, A. A., & Freeman, W. T. (2001, August). Image quilting for texture synthesis and transfer. In Proceedings of the 28th annual conference on Computer graphics and interactive techniques (pp. 341-346).</li>
+        <li>Wang, Y., Tao, X., Qi, X., Shen, X., & Jia, J. (2018). Image inpainting via generative multi-column convolutional neural networks. Advances in neural information processing systems, 31.</li>
+        <li>Vladimir Iglovikov, Binary segmentation of various cloths, https://github.com/ternaus/clothssegmentation</li>
+        <li>Kendall, A., Gal, Y., & Cipolla, R. (2018). Multi-task learning using uncertainty to weigh losses for scene geometry and semantics. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7482-7491).</li>
+
+      </ol>
+      <ol class="colRef" start="10">
+        <li> MediaPipe, Cross-platform, customizable ML solutions for live and streaming media, https://github.com/google/mediapipe, 2019.</li>
+        <li>Bulat, A., & Tzimiropoulos, G. (2017). How far are we from solving the 2d & 3d face alignment problem?(and a dataset of 230,000 3d facial landmarks). In Proceedings of the IEEE International Conference on Computer Vision (pp. 1021-1030)</li>
+        <li>Yamagishi, Junichi; Veaux, Christophe; MacDonald, Kirsten. (2019). CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning Toolkit (version 0.92), [sound]. University of Edinburgh. The Centre for Speech Technology Research (CSTR). https://doi.org/10.7488/ds/2645.</li>
+        <li>Loper, M., Mahmood, N., Romero, J., Pons-Moll, G., & Black, M. J. (2015). SMPL: A skinned multi-person linear model. ACM transactions on graphics (TOG), 34(6), 1-16.</li>
+        <li>Egger, B., Smith, W. A., Tewari, A., Wuhrer, S., Zollhoefer, M., Beeler, T., ... & Vetter, T. (2020). 3d morphable face models—past, present, and future. ACM Transactions on Graphics (TOG), 39(5), 1-38.</li>
+        <li>Roth, D., Stauffert, J. P., & Latoschik, M. E. (2019). Avatar Embodiment, Behavior Replication, and Kinematics in Virtual Reality. VR Developer Gems, 1, 321-348.</li>
+        <li>Waltemate, T., Gall, D., Roth, D., Botsch, M., & Latoschik, M. E. (2018). The impact of avatar personalization and immersion on virtual body ownership, presence, and emotional response. IEEE transactions on visualization and computer graphics, 24(4), 1643-1652.</li>
+        <li>Swartout, W., Artstein, R., Forbell, E., Foutz, S., Lane, H. C., Lange, B., ... & Traum, D. (2013). Virtual humans for learning. AI magazine, 34(4), 13-30.</li>
+      </ol>
     </div>
+    
     <!-- BootStrap 5.2.0 Beta JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
     <script src="{{url_for('static', filename = '/main.js')}}"></script>
