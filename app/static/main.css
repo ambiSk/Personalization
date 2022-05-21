@@ -10,16 +10,19 @@ html,body{
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
+    padding: 15px;
 }
 .test h5{
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
+    padding: 15px;
 }
 .teaser{
     display: flex;
     margin: auto;
-    width: 80%;
+    padding: 40px;
+    width: 1400px;
 }
 
 .row{
