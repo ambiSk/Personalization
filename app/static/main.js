@@ -20,11 +20,14 @@ dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
     dropArea.classList.add('active');
     dragText.textContent = 'Release to upload';
+    resultBox.innerHTML = "<div class='icon'><i class='fas fa-grin-wink'></i></div>";
 });
 
 dropArea.addEventListener("dragleave", ()=>{
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
+    resultBox.innerHTML = "<div class='icon'><i class='fas fa-grin-wink'></i></div>";
+
 });
 
 dropArea.addEventListener("drop", (event)=>{
