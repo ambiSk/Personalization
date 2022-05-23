@@ -14,6 +14,10 @@ def allowed_file(filename):
 def homepage():
     return render_template('upload.html')
 
+@app.route('/ping')
+def ping():
+    return ('pong')
+
 @app.route('/', methods=['POST'])
 def upload():
     
