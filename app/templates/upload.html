@@ -23,7 +23,7 @@
             <img src="data:;base64,{{ image }}" width = auto>
             <button>Try Again</button>
         </div>
-        <input type="file" id="uploadImage" name="file" autocomplete="off" required hidden accept="image/*">
+        <input type="file" id="uploadImage" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" autocomplete="off" required hidden>
         <div class="column" id="resultBox">
             <img src="data:;base64,{{ threeDimage }}" width = auto>
         </div>
@@ -35,7 +35,7 @@
             <span>OR</span>
             <button>Browse File</button>
         </div>
-        <input type="file" id="uploadImage" name="file" autocomplete="off" required hidden accept="image/*">
+        <input type="file" id="uploadImage" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" autocomplete="off" required hidden>
         <div class="column" id="resultBox">
                 <div class="icon"><i class="fas fa-grin-wink"></i></div>
         </div>
@@ -47,7 +47,7 @@
         <input type="radio" value="male" name="gender"> Male<br>        
     </div>
     
-    <button class="upload"><input type="submit" hidden>Upload</button>
+    <button class="upload">Upload</button>
 
 </form>
 
