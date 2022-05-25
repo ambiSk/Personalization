@@ -20,12 +20,12 @@
 
         {% if threeDimage %}
         <div class="column" id="uploadBox">
-            <img src="data:;base64,{{ image }}" width = auto>
+            <img src="data:;base64,{{ image }}" width="100%" height="100%" margin="auto">
             <button>Try Again</button>
         </div>
         <input type="file" id="uploadImage" name="file" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" autocomplete="off" required hidden>
         <div class="column" id="resultBox">
-            <img src="data:;base64,{{ threeDimage }}" width = auto>
+            <img src="data:;base64,{{ threeDimage }}" width="100%" height="100%" margin="auto">
         </div>
 
         {% else %}
